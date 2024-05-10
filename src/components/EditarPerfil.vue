@@ -56,7 +56,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, toRefs, onMounted, ref } from "vue";
+import { toRefs, onMounted, ref } from "vue";
 import axios from "axios";
 import { api } from "../utils/api";
 const id = window.localStorage.getItem('id')

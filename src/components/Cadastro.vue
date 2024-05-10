@@ -1,5 +1,5 @@
 <template>
-  <div class="p-10 flex flex-col items-stretch justify-center w-full mx-2">
+  <div class="p-10 flex flex-col items-stretch justify-center w-auto mx-2">
     <h1 class="text-blue-sync text-2xl font-bold text-center mb-2">Cadastre-se</h1>
     <form @submit.prevent>
         <Step1 v-show="step === 0" :cadastro="cadastro" @nextStep="nextStep"/>
@@ -14,6 +14,8 @@ import * as z from 'zod';
 import Step1 from './CadastroSteps/Step1.vue'
 import Step2 from './CadastroSteps/Step2.vue'
 import Step3 from './CadastroSteps/Step3.vue'
+import { api } from "../utils/api";
+import router from "../router";
 
 const cadastro = reactive({
   avatar: "",
@@ -46,8 +48,29 @@ const nextStep = () =>{
             step.value = 2
         }
     }else if(step.value === 2){
+        let formData = new FormData();
+        for (let chave in cadastro) {
+            if(chave === 'avatar'){
+                chave = 'file'
+                formData.append(chave, cadastro['avatar']);
+            }else{
+                formData.append(chave, cadastro[chave]);
+            }
+        }
+        for (let chave of formData.keys()) {
+        console.log(chave + ':', formData.get(chave));
+        }
         if(Object.keys(cadastro).every(key => cadastro[key] !== '')){
             console.log(cadastro)
+            api.post(`/`, formData)
+            .then((response) => {
+                 console.log(response.data);
+                 window.localStorage.setItem("id", response.data.id)
+                 router.push('/perfil')
+            })
+            .catch((error) => {
+                console.log(error);
+            })
         }
     }
 }

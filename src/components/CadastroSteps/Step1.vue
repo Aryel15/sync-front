@@ -56,7 +56,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, defineEmits, onMounted, ref } from "vue";
+import { defineEmits, onMounted, ref } from "vue";
 import axios from "axios";
 
 const estados = ref([])
@@ -73,7 +73,7 @@ const props = defineProps({
   cadastro: Object,
 });
 
-const emit = defineEmits(["handleChange", "nextStep"]);
+const emit = defineEmits(["nextStep"]);
 
 const onNextStep = () => {
   emit("nextStep");

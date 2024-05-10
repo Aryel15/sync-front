@@ -1,6 +1,6 @@
 <template>
     <main>
-        <header class="bg-[url(/src/assets/bg-menu2.svg)] w-full h-[10rem] bg-no-repeat bg-cover flex flex-col md:h-[10rem]">
+        <header class="bg-gradient-to-r from-lightblue-sync to-blue-sync w-full h-20 bg-no-repeat bg-cover flex flex-col md:h-20">
             <nav class="w-full flex justify-between items-center px-10 py-5 gap-2">
                 <RouterLink to="/explorar"><img src="/src/assets/logo.png" alt="Logo Sync360 Branca" class="w-44"></RouterLink>
                 <RouterLink to="/perfil" class="text-white">Perfil</RouterLink>

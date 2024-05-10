@@ -6,7 +6,7 @@
                 <RouterLink to="/explorar" class="text-white">Explorar</RouterLink>
             </nav>
             <section class="flex flex-col justify-center items-center text-white md:justify-start md:flex-row md:gap-5 md:ml-10">
-                <img :src="`http://localhost:3001/api/v1/user/image/${user.avatar}`" alt="Perfil usuário" class="w-44 rounded-full">
+                <img :src="`http://localhost:3001/api/v1/user/image/${user.avatar}`" alt="Perfil usuário" class="w-44 h-44 rounded-full">
                 <div class="text-center pb-5 md:text-start">
                     <h1 class="font-bold text-4xl">{{ user.nome }}</h1>
                     <p>{{ user.email }}</p>
@@ -24,7 +24,7 @@
             </div>
             <p class="text-md text-text-gray" v-if="!editarPerfil">{{ user.biografia }}</p>
             <p class="text-md text-text-gray font-light" v-if="!editarPerfil">{{ user.bairro }} - {{user.estado}}</p>
-            <EditarPerfil :user="user" v-if="editarPerfil"/>
+            <EditarPerfil :user="user" v-if="editarPerfil" @handleEditarPerfil="handleEditarPerfil"/>
         </section>
     </main>
 </template>

@@ -20,7 +20,7 @@
     </div>
 </template>
 <script setup>
-import { defineProps, defineEmits, toRefs } from "vue";
+import { defineEmits, toRefs } from "vue";
 
 const props = defineProps({
   cadastro: Object

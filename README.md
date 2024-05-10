@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# Projeto para Vaga de desenvolvedor - Sync360.io
+O projeto consiste no cadastro e login de usuários feito em VUEJS e NODE! Para rodar:
+- npm install
+- npm run dev <br>
+Na primeira tela há a opção de cadastro, login e entrar com um perfil padrão. Ao entrar você será redirecionado para a tela de perfil aonde poderá editar os dados de nome, idade, endereço e biografia do usuário.
+Também há uma tela de explorar aonde você poderá ver o perfil dos usuários.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![image](https://github.com/Aryel15/sync-front/assets/69636549/c78acc0e-f8b8-4167-a346-b68adf04569d)
 
-## Recommended IDE Setup
+![image](https://github.com/Aryel15/sync-front/assets/69636549/8a622d7a-d8f9-4891-95fb-ec621d32d066)
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+![image](https://github.com/Aryel15/sync-front/assets/69636549/186dad71-5244-4e32-9a5b-3539e53dd8db)
+
